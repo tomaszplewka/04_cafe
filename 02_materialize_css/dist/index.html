@@ -23,10 +23,10 @@
                     <a href="#home" class="brand-logo"><i class="material-icons">local_cafe</i>The Cafe</a>
                     <a href="#" data-target="mobile-navbar" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
-                        <li class="active"><a href="index.html"><i class="material-icons">home</i></a></li>
-                        <li><a href="about.html"><i class="material-icons">people</i></a></li>
-                        <li><a href="menu.html"><i class="material-icons">restaurant_menu</i></a></li>
-                        <li><a href="services.html"><i class="material-icons">room_service</i></a></li>
+                        <li class="active tooltipped" data-tooltip="Home" data-position="bottom"><a href="index.html"><i class="material-icons">home</i></a></li>
+                        <li class="tooltipped" data-tooltip="About" data-position="bottom"><a href="about.html"><i class="material-icons">people</i></a></li>
+                        <li class="tooltipped" data-tooltip="Menu" data-position="bottom"><a href="menu.html"><i class="material-icons">restaurant_menu</i></a></li>
+                        <li class="tooltipped" data-tooltip="Services" data-position="bottom"><a href="services.html"><i class="material-icons">room_service</i></a></li>
                     </ul>
                 </div>
             </div>
@@ -48,12 +48,12 @@
     </ul>
     <header id="showcase" class="orange lighten-4">
         <div class="row">
-            <div class="photo-1 col m4">
+            <div class="photo-1 col l4 hide-on-med-and-down">
                 <img class="photo" src="./img/home-showcase-1-medium.jpg" alt="photo-1">
             </div>
-            <div class="showcase-heading center-align col m8">
+            <div class="showcase-heading center-align col s12 l8">
                 <div class="showcase-text">
-                    <h1 class="">
+                    <h1 class="heading-lead">
                         Welcome to The Cafe
                     </h1>
                     <p class="flow-text">
@@ -69,9 +69,9 @@
     <section class="deep-orange lighten-5 px-1">
         <div class="container">
             <div id="our-story" class="row">
-                <h3 class="heading-lead">
+                <h2 class="heading-lead">
                     Our Story
-                </h3>
+                </h2>
                 <div class="our-story-info col s12 orange lighten-4 z-depth-1">
                     <p class="p-1">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id blanditiis adipisci illum non,
@@ -90,11 +90,11 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div id="services" class="col s12">
-                    <h3 class="heading-lead">
-                        Services
-                    </h3>
+            <div id="services" class="row mt-1">
+                <h2 class="heading-lead">
+                    Services
+                </h2>
+                <div class="col s12">
                     <div class="black-text row">
                         <div class="col m6">
                             <div class="card catering hoverable">
@@ -145,9 +145,9 @@
                 </div>
             </div>
             <div id="what-we-love" class="row">
-                <h3 class="heading-lead">
+                <h2 class="heading-lead">
                     What We Love
-                </h3>
+                </h2>
                 <div class="what-we-love-info col s12 deep-orange lighten-4 z-depth-1">
                     <p class="p-1">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id blanditiis adipisci illum non,
@@ -166,24 +166,24 @@
                     </div>
                 </div>
             </div>
-            <ul id="tabs-swipe" class="tabs tabs-fixed-width z-depth-1 black-text mt-1">
-                <li class="tab col s3">
+            <ul id="tabs-swipe" class="tabs tabs-fixed-width z-depth-1 mt-1 hide-on-small-only">
+                <li class="tab col s12 m4">
                     <a class="active" href="#opening-hours">
                         <i class="fas fa-clock"></i> Opening Hours
                     </a>
                 </li>
-                <li class="tab col s3">
+                <li class="tab col s12 m4">
                     <a href="#find-us">
                         <i class="fas fa-map-marker-alt"></i> Find Us
                     </a>
                 </li>
-                <li class="tab col s3">
+                <li class="tab col s12 m4">
                     <a href="#contact-us">
                         <i class="fas fa-phone"></i> Contact Us
                     </a>
                 </li>
             </ul>
-            <div id="opening-hours" class="col s12 px-2">
+            <div id="opening-hours" class="col s12 px-2 hide-on-small-only">
                 <div class="card orange lighten-4">
                     <div class="card-content black-text center-align">
                         <div class="hours">
@@ -203,7 +203,7 @@
                     </div>
                 </div>
             </div>
-            <div id="find-us" class="col s12 px-2">
+            <div id="find-us" class="col s12 px-2 hide-on-small-only">
                 <div class="card orange lighten-4">
                     <div class="card-content black-text center-align">
                         <div class="address">
@@ -221,15 +221,17 @@
                     </div>
                 </div>
             </div>
-            <div id="contact-us" class="col s12 px-2">
+            <div id="contact-us" class="col s12 px-2 hide-on-small-only">
                 <div class="card orange lighten-4">
                     <div class="card-content black-text center-align">
                         <div class="contact">
-                            <p class="p-2">
-                                Phone: 444-555-9090
+                            <p class="p-2 valign-wrapper">
+                                <i class="material-icons prefix">phone</i>
+                                444-555-9090
                             </p>
-                            <p class="p-2">
-                                Email: thecafedesk@cafe.com
+                            <p class="p-2 valign-wrapper">
+                                <i class="material-icons prefix">email</i>
+                                thecafedesk@cafe.com
                             </p>
                         </div>
                     </div>
@@ -241,8 +243,71 @@
                     </div>
                 </div>
             </div>
-            <div class="contact-info row">
-            </div>
+            <ul class="collapsible collapsible popout hide-on-med-and-up px-2">
+                <li class="active">
+                    <div class="collapsible-header"><i class="fas fa-clock"></i> Opening Hours</div>
+                    <div class="collapsible-body card orange lighten-4">
+                        <div class="card-content black-text center-align">
+                            <div class="hours">
+                                <p class="p-2">
+                                    Weekdays: 10AM - 8PM
+                                </p>
+                                <p class="p-2">
+                                    Weekends: 9AM - 10PM
+                                </p>
+                                <p class="p-2">
+                                    Holidays: Closed
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-action center-align">
+                            <a href="#booking" class="waves-effect waves-light btn brown darken-1 white-text">Book a Table</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="fas fa-map-marker-alt"></i> Find Us</div>
+                    <div class="collapsible-body card orange lighten-4">
+                        <div class="card-content black-text center-align">
+                            <div class="address">
+                                <p class="p-2">
+                                    8th Street, Downtown
+                                </p>
+                                <p class="p-2">
+                                    T2L 0M6, Calgary
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-action center-align">
+                            <a href="#map-directions" class="waves-effect waves-light btn brown darken-1 white-text">Get
+                                Directions</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="fas fa-phone"></i> Contact Us</div>
+                    <div class="collapsible-body card orange lighten-4">
+                        <div class="card-content black-text center-align">
+                            <div class="contact">
+                                <p class="p-2 valign-wrapper">
+                                    <i class="material-icons prefix">phone</i>
+                                    444-555-9090
+                                </p>
+                                <p class="p-2 valign-wrapper">
+                                    <i class="material-icons prefix">email</i>
+                                    thecafedesk@cafe.com
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-action center-align social">
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                            <a href="https://www.tripadvisor.com/" target="_blank"><i class="fab fa-tripadvisor fa-2x"></i></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
     <div class="parallax-container valign-wrapper">
@@ -252,7 +317,7 @@
         <div class="row">
             <div class="col s12 center-align">
                 <h2 class="heading-lead">Fancy a Cup of Coffee?</h2>
-                <a class="waves-effect waves-light btn-large brown darken-1"><i class="material-icons left">restaurant_menu</i>See Our Offer</a>
+                <a href="menu.html" class="waves-effect waves-light btn-large brown darken-1">See Our Offer</a>
             </div>
         </div>
     </div>
@@ -263,39 +328,39 @@
             </h2>
             <div id="gallery" class="orange lighten-4">
                 <div class="row">
-                    <div class="img-1 col s3">
+                    <div class="img-1 col s6 m3">
                         <img class="photo materialboxed responsive-img" src="./img/home-gallery-1-medium.jpg" alt="img-1">
                     </div>
-                    <div class="img-2 col s6">
+                    <div class="img-2 col m6 hide-on-small-only">
                         <img class="photo materialboxed responsive-img" src="./img/home-gallery-2-medium.jpg" alt="img-2">
                     </div>
-                    <div class="img-7 col s3">
+                    <div class="img-7 col s6 m3">
                         <img class="photo materialboxed responsive-img" src="./img/home-gallery-7-medium.jpg" alt="img-7">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="img-3 col s6">
+                    <div class="img-3 col s12 m6">
                         <img class="photo materialboxed responsive-img" src="./img/home-gallery-3-medium.jpg" alt="img-3">
                     </div>
-                    <div class="img-8 col s6">
+                    <div class="img-8 col s12 m6">
                         <img class="photo materialboxed responsive-img" src="./img/home-gallery-8-medium.jpg" alt="img-8">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="img-4 col s3">
+                    <div class="img-4 col s6 m3">
                         <img class="photo materialboxed responsive-img" src="./img/home-gallery-4-medium.jpg" alt="img-4">
                     </div>
-                    <div class="img-6 col s6">
+                    <div class="img-6 col m6 hide-on-small-only">
                         <img class="photo materialboxed responsive-img" src="./img/home-gallery-6-medium.jpg" alt="img-6">
                     </div>
-                    <div class="img-5 col s3">
+                    <div class="img-5 col s6 m3">
                         <img class="photo materialboxed responsive-img" src="./img/home-gallery-5-medium.jpg" alt="img-5">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <div class="parallax-container valign-wrapper parallax-reservation">
+    <div id="booking" class="parallax-container valign-wrapper parallax-reservation">
         <div class="parallax">
             <img class="photo responsive-img" src="./img/menu-showcase-1-medium.jpg" alt="menu">
         </div>
@@ -311,32 +376,30 @@
                                 <div class="row">
                                     <div class="input-field col s6">
                                         <i class="material-icons prefix">account_circle</i>
-                                        <input placeholder="Name" id="full_name" type="text" class="validate">
-                                        <!-- <label for="full_name">Full Name</label> -->
+                                        <input id="full_name" type="text" class="validate">
+                                        <label for="full_name">Name</label>
                                     </div>
                                     <div class="input-field col s6">
                                         <i class="material-icons prefix">phone</i>
-                                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="444-444-9090" required>
-                                        <!-- <label for="phone">Telephone</label> -->
+                                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                                        <label for="phone">Phone</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s6">
                                         <i class="material-icons prefix">date_range</i>
                                         <input placeholder="Date" type="text" class="datepicker" id="pick-date">
-                                        <!-- <label for="pick-date">Date</label> -->
                                     </div>
                                     <div class="input-field col s6">
                                         <i class="material-icons prefix">access_time</i>
                                         <input placeholder="Time" type="text" class="timepicker" id="pick-time">
-                                        <!-- <label for="pick-time">Time</label> -->
                                     </div>
                                 </div>
                                 <div class="row valign-wrapper">
                                     <div class="col s4">
                                         <span>How Many People</span>
                                     </div>
-                                    <div class="range-field input-field inline col s8">
+                                    <div class="range-field input-field inline col s7 offset-s1">
                                         <input type="range" id="how-many-people" min="1" max="10" value="2"/>
                                     </div>
                                 </div>
@@ -357,10 +420,10 @@
     <section class="deep-orange lighten-5 px-1">
         <div class="container">
             <div id="map-directions" class="row">
+                <div class="map-directions-heading">
+                    <h2 class="heading-lead">How To Reach Us</h2>
+                </div>
                 <div class="col s12 orange lighten-4 z-depth-1">
-                    <div class="map-directions-heading">
-                        <h2 class="heading-lead">How To Reach Us</h2>
-                    </div>
                     <div class="map-directions-text">
                         <p class="p-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis necessitatibus
                             fugit corporis asperiores illum distinctio aut cum sequi error atque!</p>
@@ -372,7 +435,7 @@
             </div>
         </div>
     </section>
-    <div class="fixed-action-btn" style="bottom:20px;right:20px;">
+    <div class="fixed-action-btn hide-on-small-only">
         <a id="menu" onclick="$('.tap-target').tapTarget('open')" class="waves-effect waves-light btn btn-floating brown darken-4" ><i class="material-icons">menu</i></a>
     </div>
     <div class="tap-target" data-target="menu">
@@ -395,28 +458,28 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">account_circle</i>
-                                <input placeholder="John Doe" id="full_name" type="text" class="validate">
+                                <input id="full_name" type="text" class="validate">
                                 <label for="full_name">Full Name</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">email</i>
-                                <input id="email" type="email" placeholder="john.doe@gmail.com" class="validate">
+                                <input id="email" type="email" class="validate">
                                 <label for="email">Email</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">phone</i>
-                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="444-444-9090" required>
-                                <label for="email">Telephone</label>
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                                <label for="tel">Phone</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">mode_edit</i>
-                                <textarea id="message" class="materialize-textarea" placeholder="Message" data-length="300"></textarea>
+                                <textarea id="message" class="materialize-textarea" data-length="300"></textarea>
                                 <label for="message">Message</label>
                             </div>
                         </div>
@@ -445,29 +508,28 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">account_circle</i>
-                                <input placeholder="John Doe" id="full_name" type="text" class="validate">
+                                <input id="full_name" type="text" class="validate">
                                 <label for="full_name">Full Name</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">email</i>
-                                <input id="email" type="email" placeholder="john.doe@gmail.com" class="validate">
+                                <input id="email" type="email" class="validate">
                                 <label for="email">Email</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">phone</i>
-                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                    placeholder="444-444-9090" required>
-                                <label for="email">Telephone</label>
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                                <label for="email">Phone</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">mode_edit</i>
-                                <textarea id="message" class="materialize-textarea" placeholder="Message" data-length="300"></textarea>
+                                <textarea id="message" class="materialize-textarea" data-length="300"></textarea>
                                 <label for="message">Message</label>
                             </div>
                         </div>
@@ -516,6 +578,9 @@
             $('.datepicker').datepicker();
             $('.timepicker').timepicker();
             $('.collapsible').collapsible();
+            $('.tooltipped').tooltip({
+                transitionMovement: -6
+            });
         });
 
         const tapTarget = document.querySelector('.tap-target');
