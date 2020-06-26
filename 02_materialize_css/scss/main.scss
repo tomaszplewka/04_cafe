@@ -199,22 +199,24 @@ h1, h2, h3, h4, .brand-logo, label, span, a, button {
     }
 }
 
+.social {
+
+    a {
+        color: #ffab40;
+        transition: color .3s ease;
+        display: inline-block;
+        margin: 0 1rem;
+
+        &:hover {
+            color: #ffd8a6 !important;
+        }
+    }
+}
+
 .modal-footer.valign-wrapper {
     justify-content: space-between;
 
-    .social {
-
-        a {
-            color: #ffab40;
-            transition: color .3s ease;
-            display: inline-block;
-            margin: 0 1rem;
-
-            &:hover {
-                color: #ffd8a6 !important;
-            }
-        }
-    }
+    
     
 }
 

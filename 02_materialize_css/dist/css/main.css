@@ -148,15 +148,16 @@ h1, h2, h3, h4, .brand-logo, label, span, a, button {
   #reservation .row {
     margin: 0; }
 
+.social a {
+  color: #ffab40;
+  transition: color .3s ease;
+  display: inline-block;
+  margin: 0 1rem; }
+  .social a:hover {
+    color: #ffd8a6 !important; }
+
 .modal-footer.valign-wrapper {
   justify-content: space-between; }
-  .modal-footer.valign-wrapper .social a {
-    color: #ffab40;
-    transition: color .3s ease;
-    display: inline-block;
-    margin: 0 1rem; }
-    .modal-footer.valign-wrapper .social a:hover {
-      color: #ffd8a6 !important; }
 
 .parallax-reservation {
   height: 450px; }
