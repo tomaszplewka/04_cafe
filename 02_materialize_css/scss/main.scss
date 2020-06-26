@@ -72,11 +72,11 @@ $text-font: 'Rokkitt', serif;
     margin-top: 3rem;
 }
 
-h1, h2, h3, h4, .brand-logo {
+h1, h2, h3, h4, .brand-logo, label, span, a, button {
     font-family: $heading-font;
 }
 
-.flow-text, p {
+.flow-text, p, input, option {
     font-family: $text-font;
 }
 
@@ -156,4 +156,114 @@ h1, h2, h3, h4, .brand-logo {
 
 .tap-target .heading-secondary {
     border-bottom-color: white;
+}
+
+
+
+
+/* label color */
+.input-field label {
+    color: #000;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: #000;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+/* valid color */
+.input-field input[type=text].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: #000;
+}
+
+#general-enquiry,
+#services-enquiry,
+#reservation {
+    margin: 2rem;
+
+    .row {
+        margin: 0;
+    }
+}
+
+.modal-footer.valign-wrapper {
+    justify-content: space-between;
+
+    .social {
+
+        a {
+            color: #ffab40;
+            transition: color .3s ease;
+            display: inline-block;
+            margin: 0 1rem;
+
+            &:hover {
+                color: #ffd8a6 !important;
+            }
+        }
+    }
+    
+}
+
+.parallax-reservation {
+    height: 450px;
+
+    > * {
+        position: relative;
+        z-index: 10;
+    }
+
+    .row {
+        margin-bottom: 0;
+    }
+
+    .collapsible {
+        margin: 1rem 0;
+    }
+
+    form {
+
+        .row {
+            margin: 0;
+        }
+
+        .input-field,
+        .range-field {
+            margin: 0.5rem 0;
+        }
+    }
+}
+
+.input-field > label,
+.range-field > label {
+    font-size: 1.1rem;
+    color: #000;
+}
+
+input[type="range"] + .thumb.active .value {
+    font-size: 1rem;
+    margin-left: -1px;
+    margin-top: 5px;
+}
+
+.collapsible-header {
+    justify-content: center;
+
+    .heading-lead {
+        margin: 0.5rem;
+    }
+
 }

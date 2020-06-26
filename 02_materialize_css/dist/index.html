@@ -295,27 +295,70 @@
                     </div>
                 </div>
             </div>
-            <div id="map-directions" class="row px-1">
-                <!-- <div id="booking" class="col s5 deep-orange lighten-4">
-                    <div class="booking-text">
-                        <h2 class="heading-lead">Book a Table</h2>
-                        <p class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, alias quis!
-                            Facere velit blanditiis veniam earum ipsum corporis laudantium iure!</p>
-                    </div>
-                    <div class="booking-form">
-                        <form>
-                            <input type="text" placeholder="Name">
-                            <input type="number" min="1" max="10" placeholder="How Many People">
-                            <input type="datetime-local" id="meeting-time" name="meeting-time" value="2020-06-12T19:30"
-                                min="2018-06-07T00:00" max="2021-06-14T00:00">
-                            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="444-444-9090"
-                                required>
-                            <div class="grid-centered">
-                                <input type="button" value="Book Now" class="btn btn-secondary">
-                            </div>
-                        </form>
-                    </div>
-                </div> -->
+        </div>
+    </section>
+    <div class="parallax-container valign-wrapper parallax-reservation">
+        <div class="parallax">
+            <img class="photo responsive-img" src="./img/menu-showcase-1-medium.jpg" alt="menu">
+        </div>
+        <div class="row">
+            <div class="col s12 center-align">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header">
+                            <h2 class="heading-lead">Book a Table</h2>
+                        </div>
+                        <div class="collapsible-body white">
+                            <form class="">
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <input placeholder="Name" id="full_name" type="text" class="validate">
+                                        <!-- <label for="full_name">Full Name</label> -->
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <i class="material-icons prefix">phone</i>
+                                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="444-444-9090" required>
+                                        <!-- <label for="phone">Telephone</label> -->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <i class="material-icons prefix">date_range</i>
+                                        <input placeholder="Date" type="text" class="datepicker" id="pick-date">
+                                        <!-- <label for="pick-date">Date</label> -->
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <i class="material-icons prefix">access_time</i>
+                                        <input placeholder="Time" type="text" class="timepicker" id="pick-time">
+                                        <!-- <label for="pick-time">Time</label> -->
+                                    </div>
+                                </div>
+                                <div class="row valign-wrapper">
+                                    <div class="col s4">
+                                        <span>How Many People</span>
+                                    </div>
+                                    <div class="range-field input-field inline col s8">
+                                        <input type="range" id="how-many-people" min="1" max="10" value="2"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 center-align">
+                                        <button class="btn waves-effect waves-light brown darken-1" type="submit" name="action">Submit
+                                            <i class="material-icons right">send</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section class="deep-orange lighten-5 px-1">
+        <div class="container">
+            <div id="map-directions" class="row">
                 <div class="col s12 orange lighten-4 z-depth-1">
                     <div class="map-directions-heading">
                         <h2 class="heading-lead">How To Reach Us</h2>
@@ -332,12 +375,123 @@
         </div>
     </section>
     <div class="fixed-action-btn" style="bottom:20px;right:20px;">
-        <a id="menu" onclick="$('.tap-target').tapTarget('open');" class="waves-effect waves-light btn btn-floating brown darken-4" ><i class="material-icons">menu</i></a>
+        <a id="menu" onclick="$('.tap-target').tapTarget('open')" class="waves-effect waves-light btn btn-floating brown darken-4" ><i class="material-icons">menu</i></a>
     </div>
     <div class="tap-target" data-target="menu">
         <div class="tap-target-content center-align">
             <h3 class="heading-secondary white-text">Have a Question?</h3>
-            <a href="#booking" class="waves-effect waves-light btn orange lighten-4 black-text">Contact Us</a>
+            <a href="#contact-form" class="waves-effect waves-light btn orange lighten-4 black-text modal-trigger">Contact Us</a>
+        </div>
+    </div>
+    <!-- MODAL  -->
+    <div id="contact-form" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h2 class="heading-lead center-align">Get In Touch</h2>
+            <ul id="tabs-modal" class="tabs tabs-fixed-width">
+                <li class="tab col s3"><a class="active" href="#general-enquiry">General</a></li>
+                <li class="tab col s3"><a href="#services-enquiry">Services</a></li>
+            </ul>
+            <div id="general-enquiry" class="col s12">
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input placeholder="John Doe" id="full_name" type="text" class="validate">
+                                <label for="full_name">Full Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">email</i>
+                                <input id="email" type="email" placeholder="john.doe@gmail.com" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">phone</i>
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="444-444-9090" required>
+                                <label for="email">Telephone</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">mode_edit</i>
+                                <textarea id="message" class="materialize-textarea" placeholder="Message" data-length="300"></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 center-align">
+                                <button class="btn waves-effect waves-light brown darken-1" type="submit" name="action">Submit
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="services-enquiry" class="col s12">
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Select Service</option>
+                                    <option value="1">Catering</option>
+                                    <option value="2">Custom Parties</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input placeholder="John Doe" id="full_name" type="text" class="validate">
+                                <label for="full_name">Full Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">email</i>
+                                <input id="email" type="email" placeholder="john.doe@gmail.com" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">phone</i>
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                    placeholder="444-444-9090" required>
+                                <label for="email">Telephone</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">mode_edit</i>
+                                <textarea id="message" class="materialize-textarea" placeholder="Message" data-length="300"></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 center-align">
+                                <button class="btn waves-effect waves-light brown darken-1" type="submit" name="action">Submit
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer valign-wrapper">
+            <div class="social">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.tripadvisor.com/" target="_blank"><i class="fab fa-tripadvisor fa-2x"></i></a>
+            </div>
+            <a href="#!" class="modal-close waves-effect waves-black btn-flat right">Go Back</a>
         </div>
     </div>
     <footer class="page-footer brown darken-1">
@@ -358,7 +512,22 @@
             $('.materialboxed').materialbox();
             $('.tabs').tabs();
             $('.tap-target').tapTarget();
+            $('.modal').modal();
+            $('textarea#message').characterCounter();
+            $('select').formSelect();
+            $('.datepicker').datepicker();
+            $('.timepicker').timepicker();
+            $('.collapsible').collapsible();
         });
+
+        const tapTarget = document.querySelector('.tap-target');
+        
+        tapTarget.addEventListener('click', e => {
+            
+            if (e.target.classList.contains('modal-trigger')) {
+                e.target.parentElement.parentElement.parentElement.classList.remove('open')
+            }
+        })
 
     </script>
 </body>
