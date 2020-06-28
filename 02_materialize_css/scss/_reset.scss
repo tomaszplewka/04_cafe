@@ -1,0 +1,96 @@
+// Variables
+$heading-font: 'Indie Flower', cursive;
+$text-font: 'Rokkitt', serif;
+
+// General Styling
+h1, h2, h3, h4, .brand-logo, label, span, a, button, .collapsible-header {
+    font-family: $heading-font;
+}
+
+.flow-text, p, input, option {
+    font-family: $text-font;
+}
+
+// Forms Styling    
+.input-field .prefix.active {
+    color: #000;
+}
+
+.input-field > label,
+.range-field > label {
+    font-size: 1.1rem;
+    color: #000;
+}
+
+input[type="text"]:not(.browser-default):focus, input[type="email"]:not(.browser-default):focus, input[type="time"]:not(.browser-default):focus, input[type="date"]:not(.browser-default):focus, input[type="datetime"]:not(.browser-default):focus, input[type="tel"]:not(.browser-default):focus, input[type="number"]:not(.browser-default):focus, textarea.materialize-textarea:focus {
+    border-bottom-color: #6d4c41 !important;
+    box-shadow: 0 1px 0 0 #6d4c41 !important;
+}
+
+input[type="text"]:not(.browser-default).validate:focus + label, input[type="email"]:not(.browser-default).validate:focus + label, input[type="time"]:not(.browser-default).validate:focus + label, input[type="date"]:not(.browser-default).validate:focus + label, input[type="datetime"]:not(.browser-default).validate:focus + label, input[type="datetime-local"]:not(.browser-default).validate:focus + label, input[type="tel"]:not(.browser-default):focus + label, input[type="number"]:not(.browser-default).validate:focus + label, textarea.materialize-textarea:focus + label,
+.dropdown-content li > a, .dropdown-content li > span {
+    color: #6d4c41 !important;
+}
+
+.select-dropdown li.disabled, .select-dropdown li.disabled > span, .select-dropdown li.optgroup {
+    color: rgba(0,0,0,0.3) !important;
+}
+
+// Datepicker & Timepicker
+.datepicker-date-display,
+.datepicker-table td.is-selected,
+.timepicker-digital-display,
+.timepicker-tick.active, .timepicker-tick:hover {
+    background-color: #ffccbc;
+}
+
+.datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done,
+.timepicker-close {
+    color: #6d4c41;
+}
+
+.datepicker-table td.is-today,
+.timepicker-table td.is-today {
+    color: #fff;
+}
+
+.datepicker-calendar-container,
+.timepicker-analog-display {
+    background-color: #ffe0b2;
+}
+
+.timepicker-canvas line {
+    stroke: #6d4c41;
+}
+
+.timepicker-canvas-bg,
+.timepicker-canvas-bearing {
+    fill: #6d4c41;
+}
+
+// Range
+input[type="range"] {
+
+    & + .thumb {
+        background-color: #6d4c41;
+
+        &.active {
+
+            .value {
+                font-size: 1rem;
+                margin-left: -1px;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    &::-moz-range-thumb {
+        box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        border: 1px solid #000000;
+        height: 36px;
+        width: 16px;
+        border-radius: 3px;
+        background: #ffffff;
+        cursor: pointer;
+    }
+}
