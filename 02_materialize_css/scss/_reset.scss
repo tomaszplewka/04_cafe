@@ -3,12 +3,17 @@ $heading-font: 'Indie Flower', cursive;
 $text-font: 'Rokkitt', serif;
 
 // General Styling
-h1, h2, h3, h4, .brand-logo, label, span, a, button, .collapsible-header {
+h1, h2, h3, h4, h5, h6, .brand-logo, label, span, a, button, .collapsible-header {
     font-family: $heading-font;
 }
 
 .flow-text, p, input, option {
     font-family: $text-font;
+}
+
+hr {
+    width: 75%;
+    border: 1px solid #fff;
 }
 
 // Forms Styling    

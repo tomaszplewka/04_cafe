@@ -1,8 +1,12 @@
-h1, h2, h3, h4, .brand-logo, label, span, a, button, .collapsible-header {
+h1, h2, h3, h4, h5, h6, .brand-logo, label, span, a, button, .collapsible-header {
   font-family: "Indie Flower", cursive; }
 
 .flow-text, p, input, option {
   font-family: "Rokkitt", serif; }
+
+hr {
+  width: 75%;
+  border: 1px solid #fff; }
 
 .input-field .prefix.active {
   color: #000; }
@@ -233,11 +237,15 @@ input[type="range"]::-moz-range-thumb {
 #contact-form .modal-footer.valign-wrapper {
   justify-content: space-between; }
 
-#about-showcase {
+#about-showcase,
+#menu-showcase {
   padding: 2rem;
   height: 700px;
   position: relative; }
-  #about-showcase .about-showcase-heading {
+  #about-showcase .about-showcase-heading,
+  #about-showcase .menu-showcase-heading,
+  #menu-showcase .about-showcase-heading,
+  #menu-showcase .menu-showcase-heading {
     position: absolute;
     top: 0;
     left: 0;
@@ -246,16 +254,25 @@ input[type="range"]::-moz-range-thumb {
     display: flex;
     justify-content: center;
     align-items: center; }
-    #about-showcase .about-showcase-heading .about-showcase-text {
+    #about-showcase .about-showcase-heading .about-showcase-text,
+    #about-showcase .about-showcase-heading .menu-showcase-text,
+    #about-showcase .menu-showcase-heading .about-showcase-text,
+    #about-showcase .menu-showcase-heading .menu-showcase-text,
+    #menu-showcase .about-showcase-heading .about-showcase-text,
+    #menu-showcase .about-showcase-heading .menu-showcase-text,
+    #menu-showcase .menu-showcase-heading .about-showcase-text,
+    #menu-showcase .menu-showcase-heading .menu-showcase-text {
       position: relative;
       z-index: 1;
       padding: 1rem;
       background-color: #ffe0b2; }
-  #about-showcase .row {
+  #about-showcase .row,
+  #menu-showcase .row {
     margin: 0;
     height: 50%;
     overflow: hidden; }
-    #about-showcase .row > div {
+    #about-showcase .row > div,
+    #menu-showcase .row > div {
       height: 100%; }
 
 #about-gallery {
@@ -315,9 +332,45 @@ input[type="range"]::-moz-range-thumb {
     margin: 0 1rem;
     font-size: 0.75rem; }
 
+#menu-list .heading-secondary {
+  margin-bottom: 0.1rem; }
+  #menu-list .heading-secondary + span {
+    margin: 0 3rem;
+    font-size: 1rem;
+    display: block; }
+
+#menu-list .col .row {
+  margin: 1rem; }
+
+#menu-list .menu-item > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+#menu-list .breakfast,
+#menu-list .lunch,
+#menu-list .sandwich,
+#menu-list .dessert {
+  height: 375px;
+  overflow: hidden;
+  margin-bottom: 4rem; }
+  #menu-list .breakfast > div,
+  #menu-list .lunch > div,
+  #menu-list .sandwich > div,
+  #menu-list .dessert > div {
+    height: 100%; }
+
+#menu-list .coffee {
+  height: 750px; }
+  #menu-list .coffee .coffee-photos {
+    height: 100%; }
+    #menu-list .coffee .coffee-photos > div {
+      height: 50%; }
+
 @media screen and (max-width: 1200px) {
   #showcase,
-  #about-showcase {
+  #about-showcase,
+  #menu-showcase {
     height: 550px; } }
 
 @media screen and (max-width: 992px) {
@@ -344,10 +397,45 @@ input[type="range"]::-moz-range-thumb {
   :root {
     font-size: 13px; }
   #showcase,
-  #about-showcase {
+  #about-showcase,
+  #menu-showcase {
     height: 450px; }
   #about-showcase .about-showcase-heading .about-showcase-text {
     padding: 0; }
   #about-gallery .our-team-gallery {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, minmax(100px, 225px)); } }
+    grid-template-rows: repeat(6, minmax(100px, 225px)); }
+  #menu-list .breakfast,
+  #menu-list .lunch,
+  #menu-list .sandwich,
+  #menu-list .dessert {
+    height: 600px; }
+    #menu-list .breakfast > div,
+    #menu-list .lunch > div,
+    #menu-list .sandwich > div,
+    #menu-list .dessert > div {
+      height: 50%; }
+  #menu-list .coffee {
+    height: 800px; }
+    #menu-list .coffee .coffee-photos {
+      height: 30%; }
+      #menu-list .coffee .coffee-photos > div {
+        height: 100%; } }
+
+@media screen and (max-width: 525px) {
+  #menu-list .breakfast,
+  #menu-list .lunch,
+  #menu-list .sandwich,
+  #menu-list .dessert {
+    height: 650px; }
+    #menu-list .breakfast > div,
+    #menu-list .lunch > div,
+    #menu-list .sandwich > div,
+    #menu-list .dessert > div {
+      height: 50%; }
+  #menu-list .coffee {
+    height: 1000px; }
+    #menu-list .coffee .coffee-photos {
+      height: 30%; }
+      #menu-list .coffee .coffee-photos > div {
+        height: 100%; } }

@@ -128,13 +128,15 @@
 // 
 // about.html
 
-// Showcase Section
-#about-showcase {
+// About Showcase Section & Menu Showcase Section
+#about-showcase,
+#menu-showcase {
     padding: 2rem;
     height: 700px;
     position: relative;
 
-    .about-showcase-heading {
+    .about-showcase-heading,
+    .menu-showcase-heading {
         position: absolute;
         top: 0;
         left: 0;
@@ -144,7 +146,8 @@
         justify-content: center;
         align-items: center;
 
-        .about-showcase-text {
+        .about-showcase-text,
+        .menu-showcase-text {
             position: relative;
             z-index: 1;
             padding: 1rem;
@@ -255,6 +258,61 @@
             .time-age {
                 margin: 0 1rem;
                 font-size: 0.75rem;
+            }
+        }
+    }
+}
+
+// 
+// menu.html
+
+// Menu Section
+#menu-list {
+
+    .heading-secondary {
+        margin-bottom: 0.1rem;
+
+        & + span {
+            margin: 0 3rem;
+            font-size: 1rem;
+            display: block;
+        }
+    }
+
+    .col .row {
+        margin: 1rem;
+    }
+
+    .menu-item {
+
+        & > div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .breakfast,
+    .lunch,
+    .sandwich,
+    .dessert {
+        height: 375px;
+        overflow: hidden;
+        margin-bottom: 4rem;
+
+        & > div {
+            height: 100%;
+        }
+    }
+
+    .coffee {
+        height: 750px;
+
+        .coffee-photos {
+            height: 100%;
+
+            & > div {
+                height: 50%;
             }
         }
     }

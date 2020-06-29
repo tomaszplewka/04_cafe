@@ -2,7 +2,8 @@
 @media screen and (max-width: 1200px) {
 
     #showcase,
-    #about-showcase {
+    #about-showcase,
+    #menu-showcase {
         height: 550px;
     }
 }
@@ -66,7 +67,8 @@
     }
 
     #showcase,
-    #about-showcase {
+    #about-showcase,
+    #menu-showcase {
         height: 450px;
     }
 
@@ -85,6 +87,62 @@
         .our-team-gallery {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(6, minmax(100px, 225px));
+        }
+    }
+
+    #menu-list {
+
+        .breakfast,
+        .lunch,
+        .sandwich,
+        .dessert {
+            height: 600px;
+
+            & > div {
+                height: 50%;
+            }
+        }
+
+        .coffee {
+            height: 800px;
+
+            .coffee-photos {
+                height: 30%;
+
+                & > div {
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 525px) {
+
+    #menu-list {
+
+        .breakfast,
+        .lunch,
+        .sandwich,
+        .dessert {
+            height: 650px;
+
+            & > div {
+                height: 50%;
+            }
+        }
+
+        .coffee {
+            height: 1000px;
+
+            .coffee-photos {
+                height: 30%;
+
+                & > div {
+                    height: 100%;
+                }
+            }
         }
     }
 
