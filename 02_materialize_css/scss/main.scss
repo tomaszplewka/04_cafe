@@ -123,4 +123,152 @@
     }
 }
 
+
+
+// 
+// about.html
+
+// Showcase Section
+#about-showcase {
+    padding: 2rem;
+    height: 700px;
+    position: relative;
+
+    .about-showcase-heading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .about-showcase-text {
+            position: relative;
+            z-index: 1;
+            padding: 1rem;
+            background-color: #ffe0b2;
+        }
+    }
+
+    .row {
+        margin: 0;
+        height: 50%;
+        overflow: hidden;
+
+        > div {
+            height: 100%;
+        }
+    }
+}
+
+//  Our Team Section
+#about-gallery {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+    'our-team-gallery our-team-gallery our-team-gallery';
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+
+    .our-team-gallery {
+        display: grid;
+        grid-gap: 1rem;
+        grid-area: our-team-gallery;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, minmax(100px, 300px));
+
+        > input {
+            display: none;
+
+            &:checked {
+
+                & + label {
+                    grid-column: 1 / span 2;
+                    grid-row: 1 / span 2;
+
+                    &:hover {
+
+                        .photo {
+                            opacity: 0.5;
+                        }
+
+                        a > div {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        label {
+            position: relative;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+
+            a > div {
+                transition: all 0.4s ease-in-out;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: grid;
+                justify-content: center;
+                align-content: flex-end;
+            }
+
+            .menu-text {
+                font-family: $text-font;
+                position: relative;
+                border-radius: 50%;
+                padding: 3rem;
+                z-index: 2;
+
+                .heading-secondary {
+                    border-bottom-color: white;
+                }
+            }
+        }
+    }
+}
+
+// Testimonials Section
+
+#testimonials {
+
+    .carousel {
+
+        .carousel-item {
+            height: 300px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .rank {
+                margin: 0rem 1rem;
+            }
+
+            .time-age {
+                margin: 0 1rem;
+                font-size: 0.75rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @import 'media';

@@ -25,6 +25,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.4s ease-in-out;
 }
 
 // Padding & Margin
@@ -57,6 +58,13 @@
     margin: 1.5rem;
     font-weight: bold;
     border-bottom: 0.1rem solid black;
+}
+
+.heading-minor {
+    font-size: 1.3rem;
+    letter-spacing: 0.2rem;
+    margin: 1rem;
+    font-weight: bold;
 }
 
 /* Paragraphs */

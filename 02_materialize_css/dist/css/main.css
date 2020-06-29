@@ -81,7 +81,8 @@ input[type="range"]::-moz-range-thumb {
 .photo {
   width: 100%;
   height: 100%;
-  object-fit: cover; }
+  object-fit: cover;
+  transition: all 0.4s ease-in-out; }
 
 .py-1 {
   padding-top: 3rem;
@@ -108,6 +109,12 @@ input[type="range"]::-moz-range-thumb {
   margin: 1.5rem;
   font-weight: bold;
   border-bottom: 0.1rem solid black; }
+
+.heading-minor {
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+  margin: 1rem;
+  font-weight: bold; }
 
 /* Paragraphs */
 .p-1 {
@@ -226,12 +233,121 @@ input[type="range"]::-moz-range-thumb {
 #contact-form .modal-footer.valign-wrapper {
   justify-content: space-between; }
 
+#about-showcase {
+  padding: 2rem;
+  height: 700px;
+  position: relative; }
+  #about-showcase .about-showcase-heading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #about-showcase .about-showcase-heading .about-showcase-text {
+      position: relative;
+      z-index: 1;
+      padding: 1rem;
+      background-color: #ffe0b2; }
+  #about-showcase .row {
+    margin: 0;
+    height: 50%;
+    overflow: hidden; }
+    #about-showcase .row > div {
+      height: 100%; }
+
+#about-gallery {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas: 'our-team-gallery our-team-gallery our-team-gallery';
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto; }
+  #about-gallery .our-team-gallery {
+    display: grid;
+    grid-gap: 1rem;
+    grid-area: our-team-gallery;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(100px, 300px)); }
+    #about-gallery .our-team-gallery > input {
+      display: none; }
+      #about-gallery .our-team-gallery > input:checked + label {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2; }
+        #about-gallery .our-team-gallery > input:checked + label:hover .photo {
+          opacity: 0.5; }
+        #about-gallery .our-team-gallery > input:checked + label:hover a > div {
+          opacity: 1; }
+    #about-gallery .our-team-gallery label {
+      position: relative;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out; }
+      #about-gallery .our-team-gallery label a > div {
+        transition: all 0.4s ease-in-out;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        justify-content: center;
+        align-content: flex-end; }
+      #about-gallery .our-team-gallery label .menu-text {
+        font-family: "Rokkitt", serif;
+        position: relative;
+        border-radius: 50%;
+        padding: 3rem;
+        z-index: 2; }
+        #about-gallery .our-team-gallery label .menu-text .heading-secondary {
+          border-bottom-color: white; }
+
+#testimonials .carousel .carousel-item {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #testimonials .carousel .carousel-item .rank {
+    margin: 0rem 1rem; }
+  #testimonials .carousel .carousel-item .time-age {
+    margin: 0 1rem;
+    font-size: 0.75rem; }
+
 @media screen and (max-width: 1200px) {
-  #showcase {
+  #showcase,
+  #about-showcase {
     height: 550px; } }
+
+@media screen and (max-width: 992px) {
+  #about-gallery .our-team-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, minmax(100px, 275px)); }
+    #about-gallery .our-team-gallery label:hover .photo {
+      opacity: 0.5; }
+    #about-gallery .our-team-gallery label:hover a > div {
+      opacity: 1; }
+    #about-gallery .our-team-gallery label .menu-text p {
+      display: none; }
+    #about-gallery .our-team-gallery label .menu-text,
+    #about-gallery .our-team-gallery input:checked + label .menu-text {
+      padding: 1rem; }
+    #about-gallery .our-team-gallery > input:checked + label {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1; }
+  #testimonials .carousel .carousel-item {
+    height: 250px;
+    width: 250px; } }
 
 @media screen and (max-width: 600px) {
   :root {
     font-size: 13px; }
-  #showcase {
-    height: 450px; } }
+  #showcase,
+  #about-showcase {
+    height: 450px; }
+  #about-showcase .about-showcase-heading .about-showcase-text {
+    padding: 0; }
+  #about-gallery .our-team-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, minmax(100px, 225px)); } }

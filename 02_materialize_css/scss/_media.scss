@@ -1,14 +1,61 @@
 // MQs
 @media screen and (max-width: 1200px) {
 
-    #showcase {
+    #showcase,
+    #about-showcase {
         height: 550px;
     }
 }
 
 @media screen and (max-width: 992px) {
     
+    // about.html
+    #about-gallery {
 
+        .our-team-gallery {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, minmax(100px, 275px));
+
+            label {
+
+                &:hover {
+
+                    .photo {
+                        opacity: 0.5;
+                    }
+
+                    a > div {
+                        opacity: 1;
+                    }
+                }
+
+                .menu-text p {
+                    display: none;
+                }
+            }
+
+            label .menu-text,
+            input:checked + label .menu-text {
+                padding: 1rem;
+            }
+
+            & > input:checked + label {
+                grid-column: 1 / span 1;
+                grid-row: 1 / span 1;
+            }
+        }
+    }
+
+    #testimonials {
+
+        .carousel {
+
+            .carousel-item {
+                height: 250px;
+                width: 250px;
+            }
+        }
+    }
 
 }
 
@@ -18,8 +65,27 @@
         font-size: 13px;
     }
 
-    #showcase {
+    #showcase,
+    #about-showcase {
         height: 450px;
+    }
+
+    #about-showcase {
+
+        .about-showcase-heading {
+
+            .about-showcase-text {
+                padding: 0;
+            }
+        }
+    }
+
+    #about-gallery {
+
+        .our-team-gallery {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, minmax(100px, 225px));
+        }
     }
 
 }
