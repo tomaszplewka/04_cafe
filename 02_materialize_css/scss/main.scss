@@ -1,355 +1,330 @@
 @import 'reset';
 @import 'utilities';
 
-// 
+//
 // index.html
 
 // Showcase Header Section
 #showcase {
+	padding: 2rem;
+	height: 700px;
 
-    padding: 2rem;
-    height: 700px;
-
-    & .row {
-        margin: 0;
-        height: 100%;
-        overflow: hidden;
-    }
+	& .row {
+		margin: 0;
+		height: 100%;
+		overflow: hidden;
+	}
 }
 
 // Services Section
 #services {
-
-    .catering,
-    .custom-parties {
-        margin: 0.75rem;
-    }
+	.catering,
+	.custom-parties {
+		margin: 0.75rem;
+	}
 }
 
 // Contact Tabs Section
 #contact-tabs {
+	.contact {
+		.p-2 {
+			justify-content: center;
 
-    .contact {
-
-        .p-2 {
-            justify-content: center;
-
-            i {
-                margin-right: 0.5rem;
-            }
-        }
-    }
+			i {
+				margin-right: 0.5rem;
+			}
+		}
+	}
 }
 
 // Gallery Section
 #gallery {
-    
-    .row {
-        margin: 0;
+	.row {
+		margin: 0;
 
-        .photo {
-            height: 350px;
-        }
-    }
+		.photo {
+			height: 350px;
+		}
+	}
 }
 
 // Parallax Booking Section
 .parallax-reservation {
-    height: 450px;
+	height: 450px;
 
-    .row {
-        margin-bottom: 0;
+	.row {
+		margin-bottom: 0;
 
-        .collapsible {
-            margin: 1rem 0;
+		.collapsible {
+			margin: 1rem 0;
 
-            .collapsible-header {
-                justify-content: center;
+			.collapsible-header {
+				justify-content: center;
 
-                .heading-lead {
-                    margin: 0.5rem;
-                }
+				.heading-lead {
+					margin: 0.5rem;
+				}
+			}
 
-            }
+			form {
+				.row {
+					margin: 0;
 
-            form {
-
-                .row {
-                    margin: 0;
-
-                    .input-field,
-                    .range-field {
-                        margin: 0.5rem 0;
-                    }
-                }
-            }
-        }
-    }
-}
-
-// Map Section
-#map-directions .photo {
-    padding: 1rem;
+					.input-field,
+					.range-field {
+						margin: 0.5rem 0;
+					}
+				}
+			}
+		}
+	}
 }
 
 // Floating Button
 #float-button-contact {
+	.tap-target {
+		background: url(../img/home-gallery-6-medium.jpg) no-repeat center center/cover;
+		opacity: 0.9;
 
-    .tap-target {
-        background: url(../img/home-gallery-6-medium.jpg) no-repeat center center/cover;
-        opacity: 0.9;
-
-        .heading-secondary {
-            border-bottom-color: white;
-        }
-    }
+		.heading-secondary {
+			border-bottom-color: white;
+		}
+	}
 }
 
 // Floating Button Modal
 #contact-form {
+	#general-enquiry,
+	#services-enquiry,
+	#reservation {
+		margin: 2rem;
 
-    #general-enquiry,
-    #services-enquiry,
-    #reservation {
-        margin: 2rem;
-    
-        .row {
-            margin: 0;
-        }
-    }
-    
-    .modal-footer.valign-wrapper {
-        justify-content: space-between;
-    }
+		.row {
+			margin: 0;
+		}
+	}
+
+	.modal-footer.valign-wrapper {
+		justify-content: space-between;
+	}
 }
 
-
-
-// 
+//
 // about.html
 
 // About Showcase Section & Menu Showcase Section
 #about-showcase,
 #menu-showcase,
 #services-showcase {
-    padding: 2rem;
-    height: 700px;
-    position: relative;
+	padding: 2rem;
+	height: 700px;
+	position: relative;
 
-    .about-showcase-heading,
-    .menu-showcase-heading,
-    .services-showcase-heading {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+	.about-showcase-heading,
+	.menu-showcase-heading,
+	.services-showcase-heading {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-        .about-showcase-text,
-        .menu-showcase-text,
-        .services-showcase-text {
-            position: relative;
-            z-index: 1;
-            padding: 1rem;
-            background-color: #ffe0b2;
-        }
-    }
+		.about-showcase-text,
+		.menu-showcase-text,
+		.services-showcase-text {
+			position: relative;
+			z-index: 1;
+			padding: 1rem;
+			background-color: #ffe0b2;
+		}
+	}
 
-    .row {
-        margin: 0;
-        height: 50%;
-        overflow: hidden;
+	.row {
+		margin: 0;
+		height: 50%;
+		overflow: hidden;
 
-        > div {
-            height: 100%;
-        }
-    }
+		> div {
+			height: 100%;
+		}
+	}
 }
 
 //  Our Team Section
 #about-gallery {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-areas:
-    'our-team-gallery our-team-gallery our-team-gallery';
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-areas: 'our-team-gallery our-team-gallery our-team-gallery';
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
 
-    .our-team-gallery {
-        display: grid;
-        grid-gap: 1rem;
-        grid-area: our-team-gallery;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, minmax(100px, 300px));
+	.our-team-gallery {
+		display: grid;
+		grid-gap: 1rem;
+		grid-area: our-team-gallery;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, minmax(100px, 300px));
 
-        > input {
-            display: none;
+		> input {
+			display: none;
 
-            &:checked {
+			&:checked {
+				& + label {
+					grid-column: 1 / span 2;
+					grid-row: 1 / span 2;
 
-                & + label {
-                    grid-column: 1 / span 2;
-                    grid-row: 1 / span 2;
+					&:hover {
+						.photo {
+							opacity: 0.5;
+						}
 
-                    &:hover {
+						a > div {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
 
-                        .photo {
-                            opacity: 0.5;
-                        }
+		label {
+			position: relative;
+			cursor: pointer;
+			transition: all 0.4s ease-in-out;
 
-                        a > div {
-                            opacity: 1;
-                        }
-                    }
-                }
-            }
-        }
+			a > div {
+				transition: all 0.4s ease-in-out;
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: grid;
+				justify-content: center;
+				align-content: flex-end;
+			}
 
-        label {
-            position: relative;
-            cursor: pointer;
-            transition: all 0.4s ease-in-out;
+			.menu-text {
+				font-family: $text-font;
+				position: relative;
+				border-radius: 50%;
+				padding: 3rem;
+				z-index: 2;
 
-            a > div {
-                transition: all 0.4s ease-in-out;
-                opacity: 0;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                display: grid;
-                justify-content: center;
-                align-content: flex-end;
-            }
-
-            .menu-text {
-                font-family: $text-font;
-                position: relative;
-                border-radius: 50%;
-                padding: 3rem;
-                z-index: 2;
-
-                .heading-secondary {
-                    border-bottom-color: white;
-                }
-            }
-        }
-    }
+				.heading-secondary {
+					border-bottom-color: white;
+				}
+			}
+		}
+	}
 }
 
 // Testimonials Section
 
 #testimonials {
+	.carousel {
+		.carousel-item {
+			height: 300px;
+			width: 300px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-    .carousel {
+			.rank {
+				margin: 0rem 1rem;
+			}
 
-        .carousel-item {
-            height: 300px;
-            width: 300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .rank {
-                margin: 0rem 1rem;
-            }
-
-            .time-age {
-                margin: 0 1rem;
-                font-size: 0.75rem;
-            }
-        }
-    }
+			.time-age {
+				margin: 0 1rem;
+				font-size: 0.75rem;
+			}
+		}
+	}
 }
 
-// 
+//
 // menu.html
 
 // Menu Section
 #menu-list {
+	.heading-secondary {
+		margin-bottom: 0.1rem;
 
-    .heading-secondary {
-        margin-bottom: 0.1rem;
+		& + span {
+			margin: 0 3rem;
+			font-size: 1rem;
+			display: block;
+		}
+	}
 
-        & + span {
-            margin: 0 3rem;
-            font-size: 1rem;
-            display: block;
-        }
-    }
+	.col .row {
+		margin: 1rem;
+	}
 
-    .col .row {
-        margin: 1rem;
-    }
+	.menu-item {
+		& > div {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
 
-    .menu-item {
+	.breakfast,
+	.lunch,
+	.sandwich,
+	.dessert {
+		height: 375px;
+		overflow: hidden;
+		margin-bottom: 4rem;
 
-        & > div {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-    }
+		& > div {
+			height: 100%;
+		}
+	}
 
-    .breakfast,
-    .lunch,
-    .sandwich,
-    .dessert {
-        height: 375px;
-        overflow: hidden;
-        margin-bottom: 4rem;
+	.coffee {
+		height: 750px;
 
-        & > div {
-            height: 100%;
-        }
-    }
+		.coffee-photos {
+			height: 100%;
 
-    .coffee {
-        height: 750px;
-
-        .coffee-photos {
-            height: 100%;
-
-            & > div {
-                height: 50%;
-            }
-        }
-    }
+			& > div {
+				height: 50%;
+			}
+		}
+	}
 }
 
-// 
+//
 // services.html
 
 // Services Section
 #services-list {
+	.catering-service,
+	.custom-parties-service {
+		height: 350px;
+		overflow: hidden;
+		margin-bottom: 4rem;
 
-    .catering-service,
-    .custom-parties-service {
-        height: 350px;
-        overflow: hidden;
-        margin-bottom: 4rem;
+		& > div {
+			height: 100%;
+		}
 
-        & > div {
-            height: 100%;
-        }
-
-        & > div:first-child {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-    }
+		& > div:first-child {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
 }
 
 #services-features {
-
-    i {
-        font-size: 3rem;
-    }
+	i {
+		font-size: 3rem;
+	}
 }
 
 @import 'media';

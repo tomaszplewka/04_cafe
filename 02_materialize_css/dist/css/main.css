@@ -1,7 +1,21 @@
-h1, h2, h3, h4, h5, h6, .brand-logo, label, span, a, button, .collapsible-header {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.brand-logo,
+label,
+span,
+a,
+button,
+.collapsible-header {
   font-family: "Indie Flower", cursive; }
 
-.flow-text, p, input, option {
+.flow-text,
+p,
+input,
+option {
   font-family: "Rokkitt", serif; }
 
 hr {
@@ -16,24 +30,46 @@ hr {
   font-size: 1.1rem;
   color: #000; }
 
-input[type="text"]:not(.browser-default):focus, input[type="email"]:not(.browser-default):focus, input[type="time"]:not(.browser-default):focus, input[type="date"]:not(.browser-default):focus, input[type="datetime"]:not(.browser-default):focus, input[type="tel"]:not(.browser-default):focus, input[type="number"]:not(.browser-default):focus, textarea.materialize-textarea:focus {
+input[type="text"]:not(.browser-default):focus,
+input[type="email"]:not(.browser-default):focus,
+input[type="time"]:not(.browser-default):focus,
+input[type="date"]:not(.browser-default):focus,
+input[type="datetime"]:not(.browser-default):focus,
+input[type="tel"]:not(.browser-default):focus,
+input[type="number"]:not(.browser-default):focus,
+textarea.materialize-textarea:focus {
   border-bottom-color: #6d4c41 !important;
   box-shadow: 0 1px 0 0 #6d4c41 !important; }
 
-input[type="text"]:not(.browser-default).validate:focus + label, input[type="email"]:not(.browser-default).validate:focus + label, input[type="time"]:not(.browser-default).validate:focus + label, input[type="date"]:not(.browser-default).validate:focus + label, input[type="datetime"]:not(.browser-default).validate:focus + label, input[type="datetime-local"]:not(.browser-default).validate:focus + label, input[type="tel"]:not(.browser-default):focus + label, input[type="number"]:not(.browser-default).validate:focus + label, textarea.materialize-textarea:focus + label,
-.dropdown-content li > a, .dropdown-content li > span {
+input[type="text"]:not(.browser-default).validate:focus + label,
+input[type="email"]:not(.browser-default).validate:focus + label,
+input[type="time"]:not(.browser-default).validate:focus + label,
+input[type="date"]:not(.browser-default).validate:focus + label,
+input[type="datetime"]:not(.browser-default).validate:focus + label,
+input[type="datetime-local"]:not(.browser-default).validate:focus + label,
+input[type="tel"]:not(.browser-default):focus + label,
+input[type="number"]:not(.browser-default).validate:focus + label,
+textarea.materialize-textarea:focus + label,
+.dropdown-content li > a,
+.dropdown-content li > span {
   color: #6d4c41 !important; }
 
-.select-dropdown li.disabled, .select-dropdown li.disabled > span, .select-dropdown li.optgroup {
+.select-dropdown li.disabled,
+.select-dropdown li.disabled > span,
+.select-dropdown li.optgroup {
   color: rgba(0, 0, 0, 0.3) !important; }
 
 .datepicker-date-display,
 .datepicker-table td.is-selected,
 .timepicker-digital-display,
-.timepicker-tick.active, .timepicker-tick:hover {
+.timepicker-tick.active,
+.timepicker-tick:hover {
   background-color: #ffccbc; }
 
-.datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done,
+.datepicker-cancel,
+.datepicker-clear,
+.datepicker-today,
+.datepicker-done,
 .timepicker-close {
   color: #6d4c41; }
 
@@ -155,16 +191,23 @@ input[type="range"]::-moz-range-thumb {
 .tabs .indicator {
   background-color: #3e2723; }
 
-.collapsible-header {
+.collapsible li .collapsible-header {
   transition: all 0.3s ease; }
-  .collapsible-header:hover {
+  .collapsible li .collapsible-header:hover {
+    color: #3e2723;
     background-color: rgba(62, 39, 35, 0.3); }
-  .collapsible-header:focus {
+  .collapsible li .collapsible-header:focus {
     background-color: rgba(109, 76, 65, 0.3);
     border-bottom: 2px solid #6d4c41; }
 
-.collapsible-body {
+.collapsible li .collapsible-body {
   margin-top: 0; }
+
+.collapsible li.active {
+  background-color: rgba(62, 39, 35, 0.3); }
+
+.collapsible li:focus.active {
+  background-color: rgba(109, 76, 65, 0.3); }
 
 .fixed-action-btn {
   bottom: 20px;
@@ -215,9 +258,6 @@ input[type="range"]::-moz-range-thumb {
         .parallax-reservation .row .collapsible form .row .input-field,
         .parallax-reservation .row .collapsible form .row .range-field {
           margin: 0.5rem 0; }
-
-#map-directions .photo {
-  padding: 1rem; }
 
 #float-button-contact .tap-target {
   background: url(../img/home-gallery-6-medium.jpg) no-repeat center center/cover;
@@ -476,7 +516,7 @@ input[type="range"]::-moz-range-thumb {
     padding: 0; }
   #about-gallery .our-team-gallery {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, minmax(100px, 225px)); }
+    grid-template-rows: repeat(6, minmax(100px, 325px)); }
   #menu-list .breakfast,
   #menu-list .lunch,
   #menu-list .sandwich,

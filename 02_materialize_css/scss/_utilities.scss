@@ -2,163 +2,172 @@
 
 // Parallax
 .parallax-container {
-    height: 300px;
-    position: relative;
+	height: 300px;
+	position: relative;
 
-    &::before {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        content: "";
-        top: 0;
-        left: 0;
-        background-color: rgba(255,255,255,0.4);
-    }
+	&::before {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		content: "";
+		top: 0;
+		left: 0;
+		background-color: rgba(255, 255, 255, 0.4);
+	}
 
-    > * {
-        z-index: 1;
-    }
+	> * {
+		z-index: 1;
+	}
 }
 
 // Imgs
 .photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.4s ease-in-out;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: all 0.4s ease-in-out;
 }
 
 // Padding & Margin
 .py-1 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 }
 
 .py-2 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }
 
 .mt-1 {
-    margin-top: 3rem;
+	margin-top: 3rem;
 }
 
 /* Headings */
 .heading-lead {
-    font-size: 2.5rem;
-    letter-spacing: 0.5rem;
-    margin: 2rem;
-    font-weight: bold;
-    border-bottom: 0.1rem solid black;
+	font-size: 2.5rem;
+	letter-spacing: 0.5rem;
+	margin: 2rem;
+	font-weight: bold;
+	border-bottom: 0.1rem solid black;
 }
 
 .heading-secondary {
-    font-size: 2rem;
-    letter-spacing: 0.3rem;
-    margin: 1.5rem;
-    font-weight: bold;
-    border-bottom: 0.1rem solid black;
+	font-size: 2rem;
+	letter-spacing: 0.3rem;
+	margin: 1.5rem;
+	font-weight: bold;
+	border-bottom: 0.1rem solid black;
 }
 
 .heading-minor {
-    font-size: 1.3rem;
-    letter-spacing: 0.2rem;
-    margin: 1rem;
-    font-weight: bold;
+	font-size: 1.3rem;
+	letter-spacing: 0.2rem;
+	margin: 1rem;
+	font-weight: bold;
 }
 
 /* Paragraphs */
 .p-1 {
-    font-size: 1.5rem;
-    margin: 2rem;
-    line-height: 1.5em;
+	font-size: 1.5rem;
+	margin: 2rem;
+	line-height: 1.5em;
 }
 
 .p-2 {
-    font-size: 1.3rem;
-    margin: 1rem;
-    line-height: 1.3em;
+	font-size: 1.3rem;
+	margin: 1rem;
+	line-height: 1.3em;
 }
 
 .p-3 {
-    font-size: 1.1rem;
-    margin: 0.75rem;
-    line-height: 1.1em;
+	font-size: 1.1rem;
+	margin: 0.75rem;
+	line-height: 1.1em;
 }
 
 .flow-text {
-    margin-left: 1rem;
-    margin-right: 1rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
 
 // Grid
 .row .col {
-    padding: 0;
+	padding: 0;
 }
 
 // Tabs
 .tabs {
+	.tab {
+		a {
+			color: #3e2723;
+			transition: all 0.3s ease;
 
-    .tab {
+			&:hover,
+			&.active {
+				color: #3e2723;
+				background-color: rgba(62, 39, 35, 0.3);
+			}
 
-        a {
-            color: #3e2723;
-            transition: all 0.3s ease;
+			&:focus,
+			&:focus.active {
+				background-color: rgba(109, 76, 65, 0.3);
+			}
+		}
+	}
 
-            &:hover,
-            &.active {
-                color: #3e2723;
-                background-color: rgba(62, 39, 35, 0.3);
-            }
-
-            &:focus,
-            &:focus.active {
-                background-color: rgba(109, 76, 65, 0.3);
-            }
-        }
-    }
-
-    .indicator {
-        background-color: #3e2723;
-    }
+	.indicator {
+		background-color: #3e2723;
+	}
 }
 
 // Collapsibles
-.collapsible-header {
-    transition: all 0.3s ease;
+.collapsible {
+	li {
+		.collapsible-header {
+			transition: all 0.3s ease;
 
-    &:hover {
-        background-color: rgba(62, 39, 35, 0.3);
-    }
+			&:hover {
+				color: #3e2723;
+				background-color: rgba(62, 39, 35, 0.3);
+			}
 
-    &:focus {
-        background-color: rgba(109, 76, 65, 0.3);
-        border-bottom: 2px solid #6d4c41
-    }
-}
+			&:focus {
+				background-color: rgba(109, 76, 65, 0.3);
+				border-bottom: 2px solid #6d4c41;
+			}
+		}
 
-.collapsible-body {
-    margin-top: 0;
+		.collapsible-body {
+			margin-top: 0;
+		}
+
+		&.active {
+			background-color: rgba(62, 39, 35, 0.3);
+		}
+
+		&:focus.active {
+			background-color: rgba(109, 76, 65, 0.3);
+		}
+	}
 }
 
 // Miscellaneous
 
 .fixed-action-btn {
-    bottom: 20px;
-    right: 20px;
+	bottom: 20px;
+	right: 20px;
 }
 
 .social {
+	a {
+		color: #ffab40;
+		transition: color .3s ease;
+		display: inline-block;
+		margin: 0 1rem;
 
-    a {
-        color: #ffab40;
-        transition: color .3s ease;
-        display: inline-block;
-        margin: 0 1rem;
-
-        &:hover {
-            color: #ffd8a6 !important;
-        }
-    }
+		&:hover {
+			color: #ffd8a6 !important;
+		}
+	}
 }
-
