@@ -423,6 +423,10 @@ input[type="range"]::-moz-range-thumb {
         height: 100%; } }
 
 @media screen and (max-width: 525px) {
+  .modal.modal-fixed-footer {
+    width: 90%; }
+  .social a {
+    margin: 0 0.5rem; }
   #menu-list .breakfast,
   #menu-list .lunch,
   #menu-list .sandwich,
