@@ -95,10 +95,33 @@ input[type="range"] + .thumb {
     margin-left: -1px;
     margin-top: 5px; }
 
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d !important;
+  border: 1px solid #000000;
+  height: 22px;
+  margin-top: -11px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer; }
+
 input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   border: 1px solid #000000;
   height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer; }
+
+input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 20px;
+  margin-top: 1px;
   width: 16px;
   border-radius: 3px;
   background: #ffffff;
@@ -240,8 +263,10 @@ input[type="range"]::-moz-range-thumb {
 
 #gallery .row {
   margin: 0; }
-  #gallery .row .photo {
+  #gallery .row .col {
     height: 350px; }
+    #gallery .row .col .photo {
+      height: 350px; }
 
 .parallax-reservation {
   height: 450px; }

@@ -42,8 +42,12 @@
 	.row {
 		margin: 0;
 
-		.photo {
+		.col {
 			height: 350px;
+
+			.photo {
+				height: 350px;
+			}
 		}
 	}
 }
