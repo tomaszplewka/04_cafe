@@ -130,13 +130,15 @@
 
 // About Showcase Section & Menu Showcase Section
 #about-showcase,
-#menu-showcase {
+#menu-showcase,
+#services-showcase {
     padding: 2rem;
     height: 700px;
     position: relative;
 
     .about-showcase-heading,
-    .menu-showcase-heading {
+    .menu-showcase-heading,
+    .services-showcase-heading {
         position: absolute;
         top: 0;
         left: 0;
@@ -147,7 +149,8 @@
         align-items: center;
 
         .about-showcase-text,
-        .menu-showcase-text {
+        .menu-showcase-text,
+        .services-showcase-text {
             position: relative;
             z-index: 1;
             padding: 1rem;
@@ -318,15 +321,32 @@
     }
 }
 
+// 
+// services.html
 
+// Services Section
+#services-list {
 
+    .catering-service,
+    .custom-parties-service {
+        height: 350px;
+        overflow: hidden;
+        margin-bottom: 4rem;
 
+        & > div {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
 
+#services-features {
 
-
-
-
-
-
+    i {
+        font-size: 3rem;
+    }
+}
 
 @import 'media';

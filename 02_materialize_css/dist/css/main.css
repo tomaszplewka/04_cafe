@@ -238,14 +238,20 @@ input[type="range"]::-moz-range-thumb {
   justify-content: space-between; }
 
 #about-showcase,
-#menu-showcase {
+#menu-showcase,
+#services-showcase {
   padding: 2rem;
   height: 700px;
   position: relative; }
   #about-showcase .about-showcase-heading,
   #about-showcase .menu-showcase-heading,
+  #about-showcase .services-showcase-heading,
   #menu-showcase .about-showcase-heading,
-  #menu-showcase .menu-showcase-heading {
+  #menu-showcase .menu-showcase-heading,
+  #menu-showcase .services-showcase-heading,
+  #services-showcase .about-showcase-heading,
+  #services-showcase .menu-showcase-heading,
+  #services-showcase .services-showcase-heading {
     position: absolute;
     top: 0;
     left: 0;
@@ -256,23 +262,44 @@ input[type="range"]::-moz-range-thumb {
     align-items: center; }
     #about-showcase .about-showcase-heading .about-showcase-text,
     #about-showcase .about-showcase-heading .menu-showcase-text,
+    #about-showcase .about-showcase-heading .services-showcase-text,
     #about-showcase .menu-showcase-heading .about-showcase-text,
     #about-showcase .menu-showcase-heading .menu-showcase-text,
+    #about-showcase .menu-showcase-heading .services-showcase-text,
+    #about-showcase .services-showcase-heading .about-showcase-text,
+    #about-showcase .services-showcase-heading .menu-showcase-text,
+    #about-showcase .services-showcase-heading .services-showcase-text,
     #menu-showcase .about-showcase-heading .about-showcase-text,
     #menu-showcase .about-showcase-heading .menu-showcase-text,
+    #menu-showcase .about-showcase-heading .services-showcase-text,
     #menu-showcase .menu-showcase-heading .about-showcase-text,
-    #menu-showcase .menu-showcase-heading .menu-showcase-text {
+    #menu-showcase .menu-showcase-heading .menu-showcase-text,
+    #menu-showcase .menu-showcase-heading .services-showcase-text,
+    #menu-showcase .services-showcase-heading .about-showcase-text,
+    #menu-showcase .services-showcase-heading .menu-showcase-text,
+    #menu-showcase .services-showcase-heading .services-showcase-text,
+    #services-showcase .about-showcase-heading .about-showcase-text,
+    #services-showcase .about-showcase-heading .menu-showcase-text,
+    #services-showcase .about-showcase-heading .services-showcase-text,
+    #services-showcase .menu-showcase-heading .about-showcase-text,
+    #services-showcase .menu-showcase-heading .menu-showcase-text,
+    #services-showcase .menu-showcase-heading .services-showcase-text,
+    #services-showcase .services-showcase-heading .about-showcase-text,
+    #services-showcase .services-showcase-heading .menu-showcase-text,
+    #services-showcase .services-showcase-heading .services-showcase-text {
       position: relative;
       z-index: 1;
       padding: 1rem;
       background-color: #ffe0b2; }
   #about-showcase .row,
-  #menu-showcase .row {
+  #menu-showcase .row,
+  #services-showcase .row {
     margin: 0;
     height: 50%;
     overflow: hidden; }
     #about-showcase .row > div,
-    #menu-showcase .row > div {
+    #menu-showcase .row > div,
+    #services-showcase .row > div {
       height: 100%; }
 
 #about-gallery {
@@ -367,10 +394,26 @@ input[type="range"]::-moz-range-thumb {
     #menu-list .coffee .coffee-photos > div {
       height: 50%; }
 
+#services-list .catering-service,
+#services-list .custom-parties-service {
+  height: 350px;
+  overflow: hidden;
+  margin-bottom: 4rem; }
+  #services-list .catering-service > div,
+  #services-list .custom-parties-service > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+#services-features i {
+  font-size: 3rem; }
+
 @media screen and (max-width: 1200px) {
   #showcase,
   #about-showcase,
-  #menu-showcase {
+  #menu-showcase,
+  #services-showcase {
     height: 550px; } }
 
 @media screen and (max-width: 992px) {
@@ -398,9 +441,36 @@ input[type="range"]::-moz-range-thumb {
     font-size: 13px; }
   #showcase,
   #about-showcase,
-  #menu-showcase {
+  #menu-showcase,
+  #services-showcase {
     height: 450px; }
-  #about-showcase .about-showcase-heading .about-showcase-text {
+  #about-showcase .about-showcase-heading .about-showcase-text,
+  #about-showcase .about-showcase-heading .menu-showcase-text,
+  #about-showcase .about-showcase-heading .services-showcase-text,
+  #about-showcase .menu-showcase-heading .about-showcase-text,
+  #about-showcase .menu-showcase-heading .menu-showcase-text,
+  #about-showcase .menu-showcase-heading .services-showcase-text,
+  #about-showcase .services-showcase-heading .about-showcase-text,
+  #about-showcase .services-showcase-heading .menu-showcase-text,
+  #about-showcase .services-showcase-heading .services-showcase-text,
+  #menu-showcase .about-showcase-heading .about-showcase-text,
+  #menu-showcase .about-showcase-heading .menu-showcase-text,
+  #menu-showcase .about-showcase-heading .services-showcase-text,
+  #menu-showcase .menu-showcase-heading .about-showcase-text,
+  #menu-showcase .menu-showcase-heading .menu-showcase-text,
+  #menu-showcase .menu-showcase-heading .services-showcase-text,
+  #menu-showcase .services-showcase-heading .about-showcase-text,
+  #menu-showcase .services-showcase-heading .menu-showcase-text,
+  #menu-showcase .services-showcase-heading .services-showcase-text,
+  #services-showcase .about-showcase-heading .about-showcase-text,
+  #services-showcase .about-showcase-heading .menu-showcase-text,
+  #services-showcase .about-showcase-heading .services-showcase-text,
+  #services-showcase .menu-showcase-heading .about-showcase-text,
+  #services-showcase .menu-showcase-heading .menu-showcase-text,
+  #services-showcase .menu-showcase-heading .services-showcase-text,
+  #services-showcase .services-showcase-heading .about-showcase-text,
+  #services-showcase .services-showcase-heading .menu-showcase-text,
+  #services-showcase .services-showcase-heading .services-showcase-text {
     padding: 0; }
   #about-gallery .our-team-gallery {
     grid-template-columns: 1fr;
@@ -420,7 +490,13 @@ input[type="range"]::-moz-range-thumb {
     #menu-list .coffee .coffee-photos {
       height: 30%; }
       #menu-list .coffee .coffee-photos > div {
-        height: 100%; } }
+        height: 100%; }
+  #services-list .catering-service,
+  #services-list .custom-parties-service {
+    height: 600px; }
+    #services-list .catering-service > div,
+    #services-list .custom-parties-service > div {
+      height: 50%; } }
 
 @media screen and (max-width: 525px) {
   .modal.modal-fixed-footer {
@@ -442,4 +518,10 @@ input[type="range"]::-moz-range-thumb {
     #menu-list .coffee .coffee-photos {
       height: 30%; }
       #menu-list .coffee .coffee-photos > div {
-        height: 100%; } }
+        height: 100%; }
+  #services-features .collapsible li {
+    margin: 0; }
+  #services-features .collapsible .collapsible-header i {
+    font-size: 2rem; }
+  #services-features .collapsible .collapsible-header .heading-secondary {
+    font-size: 1.5rem; } }

@@ -3,7 +3,8 @@
 
     #showcase,
     #about-showcase,
-    #menu-showcase {
+    #menu-showcase,
+    #services-showcase {
         height: 550px;
     }
 }
@@ -68,15 +69,22 @@
 
     #showcase,
     #about-showcase,
-    #menu-showcase {
+    #menu-showcase,
+    #services-showcase {
         height: 450px;
     }
 
-    #about-showcase {
+    #about-showcase,
+    #menu-showcase,
+    #services-showcase {
 
-        .about-showcase-heading {
+        .about-showcase-heading,
+        .menu-showcase-heading,
+        .services-showcase-heading {
 
-            .about-showcase-text {
+            .about-showcase-text,
+            .menu-showcase-text,
+            .services-showcase-text {
                 padding: 0;
             }
         }
@@ -112,6 +120,18 @@
                 & > div {
                     height: 100%;
                 }
+            }
+        }
+    }
+
+    #services-list {
+
+        .catering-service,
+        .custom-parties-service {
+            height: 600px;
+
+            & > div {
+                height: 50%;
             }
         }
     }
@@ -152,6 +172,27 @@
 
                 & > div {
                     height: 100%;
+                }
+            }
+        }
+    }
+
+    #services-features {
+
+        .collapsible {
+
+            li {
+                margin: 0;
+            }
+
+            .collapsible-header {
+
+                i {
+                    font-size: 2rem;
+                }
+
+                .heading-secondary {
+                    font-size: 1.5rem;
                 }
             }
         }
