@@ -401,7 +401,9 @@ input[type="range"]::-moz-range-thumb {
   margin-bottom: 4rem; }
   #services-list .catering-service > div,
   #services-list .custom-parties-service > div {
-    height: 100%;
+    height: 100%; }
+  #services-list .catering-service > div:first-child,
+  #services-list .custom-parties-service > div:first-child {
     display: flex;
     flex-direction: column;
     justify-content: center; }
