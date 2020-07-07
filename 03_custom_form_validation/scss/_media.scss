@@ -1,0 +1,188 @@
+// MQs
+@media screen and (max-width: 1200px) {
+	#showcase,
+	#about-showcase,
+	#menu-showcase,
+	#services-showcase {
+		height: 550px;
+	}
+
+	.parallax-reservation {
+		height: 400px !important;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	// about.html
+	#about-gallery {
+		.our-team-gallery {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(3, minmax(100px, 275px));
+
+			label {
+				&:hover {
+					.photo {
+						opacity: 0.5;
+					}
+
+					a > div {
+						opacity: 1;
+					}
+				}
+
+				.menu-text p {
+					display: none;
+				}
+			}
+
+			label .menu-text,
+			input:checked + label .menu-text {
+				padding: 1rem;
+			}
+
+			& > input:checked + label {
+				grid-column: 1 / span 1;
+				grid-row: 1 / span 1;
+			}
+		}
+	}
+
+	#testimonials {
+		.carousel {
+			.carousel-item {
+				height: 250px;
+				width: 250px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	:root {
+		font-size: 13px;
+	}
+
+	#showcase,
+	#about-showcase,
+	#menu-showcase,
+	#services-showcase {
+		height: 450px;
+	}
+
+	#about-showcase,
+	#menu-showcase,
+	#services-showcase {
+		.about-showcase-heading,
+		.menu-showcase-heading,
+		.services-showcase-heading {
+			.about-showcase-text,
+			.menu-showcase-text,
+			.services-showcase-text {
+				padding: 0;
+			}
+		}
+	}
+
+	#about-gallery {
+		.our-team-gallery {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(6, minmax(100px, 325px));
+		}
+	}
+
+	#menu-list {
+		.breakfast,
+		.lunch,
+		.sandwich,
+		.dessert {
+			height: 600px;
+
+			& > div {
+				height: 50%;
+			}
+		}
+
+		.coffee {
+			height: 800px;
+
+			.coffee-photos {
+				height: 30%;
+
+				& > div {
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	#services-list {
+		.catering-service,
+		.custom-parties-service {
+			height: 600px;
+
+			& > div {
+				height: 50%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 525px) {
+	.modal.modal-fixed-footer {
+		width: 90%;
+	}
+
+	.social {
+		a {
+			margin: 0 0.5rem;
+		}
+	}
+
+	#menu-list {
+		.breakfast,
+		.lunch,
+		.sandwich,
+		.dessert {
+			height: 650px;
+
+			& > div {
+				height: 50%;
+			}
+		}
+
+		.coffee {
+			height: 1000px;
+
+			.coffee-photos {
+				height: 30%;
+
+				& > div {
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	#services-features {
+		.collapsible {
+			li {
+				margin: 0;
+			}
+
+			.collapsible-header {
+				i {
+					font-size: 2rem;
+				}
+
+				.heading-secondary {
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+
+	.modal.timepicker-modal.open,
+	.modal.datepicker-modal.open {
+		width: 100%;
+	}
+}
