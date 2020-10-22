@@ -1,3 +1,125 @@
+// Initialization
+document.addEventListener('DOMContentLoaded', () => {
+	// sidenav
+	var elemsSidenav = document.querySelectorAll('.sidenav');
+	var instancesSidenav = M.Sidenav.init(elemsSidenav, {});
+	// tabs
+	var elemsTabs = document.querySelectorAll('.tabs');
+	var instanceTabs = M.Tabs.init(elemsTabs, {});
+	// modal
+	var elemsModal = document.querySelectorAll('.modal');
+	var instancesModal = M.Modal.init(elemsModal,
+		{
+			onOpenStart: function() {
+				const selectInput = document.querySelector('#services-form .select-wrapper input');
+				selectInput.classList.remove('invalid');
+			},
+			onCloseStart: function() {
+				modalContent.scrollTop = 0;
+				// general form
+				if (modalServicesFormLi.firstElementChild.classList.contains('active')) {
+					Array.from(servicesFormInputs).forEach((input) => {
+						if (input.classList.contains('invalid')) {
+							input.nextElementSibling.nextElementSibling.style.display = 'none';
+							input.classList.remove('invalid');
+						}
+						if (input.classList.contains('valid')) {
+							input.classList.remove('valid');
+						}
+					});
+					if (messageInputServices.classList.contains('invalid')) {
+						messageInputServices.nextElementSibling.nextElementSibling.style.display = 'none';
+						messageInputServices.classList.remove('invalid');
+						feedbackTextServices.nextElementSibling.classList.remove('invalid');
+					}
+					if (messageInputServices.classList.contains('valid')) {
+						messageInputServices.classList.remove('valid');
+						feedbackTextServices.nextElementSibling.classList.remove('valid');
+					}
+					const selectInput = document.querySelector('#services-form .select-wrapper input');
+					if (
+						selectInput.classList.contains('invalid')
+					) {
+						selectInput.classList.remove('invalid');
+						const selectFeedbackMsg = document.querySelector('.select-wrapper').nextElementSibling;
+						selectFeedbackMsg.style.display = 'none';
+					}
+					if (
+						selectInput.classList.contains('valid')
+					) {
+						selectInput.classList.remove('valid');
+					}
+					lengthSpanServices.textContent = 0;
+					servicesForm.reset();
+				}
+
+				// services form
+				if (modalGeneralFormLi.firstElementChild.classList.contains('active')) {
+					Array.from(generalFormInputs).forEach((input) => {
+						if (input.classList.contains('invalid')) {
+							input.nextElementSibling.nextElementSibling.style.display = 'none';
+							input.classList.remove('invalid');
+						}
+						if (input.classList.contains('valid')) {
+							input.classList.remove('valid');
+						}
+					});
+					if (messageInputGeneral.classList.contains('invalid')) {
+						messageInputGeneral.nextElementSibling.nextElementSibling.style.display = 'none';
+						messageInputGeneral.classList.remove('invalid');
+						feedbackTextGeneral.nextElementSibling.classList.remove('invalid');
+					}
+					if (messageInputGeneral.classList.contains('valid')) {
+						messageInputGeneral.classList.remove('valid');
+						feedbackTextGeneral.nextElementSibling.classList.remove('valid');
+					}
+					lengthSpanGeneral.textContent = 0;
+					generalForm.reset();
+				}
+			}
+		}
+	);
+	// form select
+	var elemsSelect = document.querySelectorAll('select');
+	var instancesSelect = M.FormSelect.init(elemsSelect, {});
+	// datepicker
+	var elemsDP = document.querySelectorAll('.datepicker');
+	var instancesDP = M.Datepicker.init(elemsDP, {});
+	// timepicker
+	var elemsTP = document.querySelectorAll('.timepicker');
+	var instancesTP = M.Timepicker.init(elemsTP, {});
+	// collapsible
+	var elemsCollapsible = document.querySelectorAll('.collapsible');
+	var instancesCollapsible = M.Collapsible.init(elemsCollapsible, {});
+	// tooltip
+	var elemsTooltip = document.querySelectorAll('.tooltipped');
+	var instancesTooltip = M.Tooltip.init(elemsTooltip, {
+		transitionMovement: -6
+	});
+	// tap-target
+	var elemsTap = document.querySelector('.tap-target');
+	var instancesTap = M.TapTarget.init(elemsTap, {});
+	// carousel
+	var carouselElems = document.querySelector('.carousel');
+	var carouselInstance = M.Carousel.init(
+		carouselElems,
+		{
+			fullWidth: true,
+			indicators: true
+		}
+	);
+	function moveNextCarousel() {
+		var elems = document.querySelector('.carousel');
+		var moveRight = M.Carousel.getInstance(elems);
+		moveRight.next(1);
+	}
+	autoplay();
+	function autoplay() {
+		moveNextCarousel();
+		setTimeout(autoplay, 4000);
+	}
+});
+
 // Auto-close Feature Discovery Btn
 const tapTarget = document.querySelector('.tap-target');
 
@@ -14,6 +136,7 @@ menuBtn.addEventListener('click', () => {
 	var elemsTap = document.querySelector('.tap-target');
 	var instancesTap = M.TapTarget.getInstance(elemsTap);
 	instancesTap.open();
+
 });
 
 // RegEx Patterns
@@ -238,6 +361,14 @@ bookingForm.addEventListener('submit', (e) => {
 	}, 3000);
 });
 
+const bookATableLi = document.querySelector('#book-a-table');
+
+bookATableLi.firstElementChild.addEventListener('click', () => {
+	if (bookATableLi.classList.contains('active')) {
+		bookingForm.reset();
+	}
+});
+
 // Submit Event -- #general-form
 const generalForm = document.querySelector('#general-form');
 const generalSubmit = document.querySelector('#general-form button');
@@ -270,6 +401,47 @@ generalForm.addEventListener('submit', (e) => {
 			messageInputGeneral.classList.add('invalid');
 			feedbackTextGeneral.nextElementSibling.classList.add('invalid');
 		}
+		modalContent.scrollTop = 0;
+	}
+});
+
+const modalGeneralFormLi = document.querySelector('#modal-general-form');
+
+modalGeneralFormLi.addEventListener('click', () => {
+	if (!modalGeneralFormLi.firstElementChild.classList.contains('active')) {
+		Array.from(servicesFormInputs).forEach((input) => {
+			if (input.classList.contains('invalid')) {
+				input.nextElementSibling.nextElementSibling.style.display = 'none';
+				input.classList.remove('invalid');
+			}
+			if (input.classList.contains('valid')) {
+				input.classList.remove('valid');
+			}
+		});
+		if (messageInputServices.classList.contains('invalid')) {
+			messageInputServices.nextElementSibling.nextElementSibling.style.display = 'none';
+			messageInputServices.classList.remove('invalid');
+			feedbackTextServices.nextElementSibling.classList.remove('invalid');
+		}
+		if (messageInputServices.classList.contains('valid')) {
+			messageInputServices.classList.remove('valid');
+			feedbackTextServices.nextElementSibling.classList.remove('valid');
+		}
+		const selectInput = document.querySelector('#services-form .select-wrapper input');
+		if (
+			selectInput.classList.contains('invalid')
+		) {
+			selectInput.classList.remove('invalid');
+			const selectFeedbackMsg = document.querySelector('.select-wrapper').nextElementSibling;
+			selectFeedbackMsg.style.display = 'none';
+		}
+		if (
+			selectInput.classList.contains('valid')
+		) {
+			selectInput.classList.remove('valid');
+		}
+		lengthSpanServices.textContent = 0;
+		servicesForm.reset();
 	}
 });
 
@@ -315,5 +487,35 @@ servicesForm.addEventListener('submit', (e) => {
 			const selectFeedbackMsg = document.querySelector('.select-wrapper').nextElementSibling;
 			selectFeedbackMsg.style.display = 'inline-block';
 		}
+		modalContent.scrollTop = 0;
+	}
+});
+
+const modalServicesFormLi = document.querySelector('#modal-services-form');
+
+modalServicesFormLi.addEventListener('click', () => {
+	if (!modalServicesFormLi.firstElementChild.classList.contains('active')) {
+		const selectInput = document.querySelector('#services-form .select-wrapper input');
+		selectInput.classList.remove('invalid');
+		Array.from(generalFormInputs).forEach((input) => {
+			if (input.classList.contains('invalid')) {
+				input.nextElementSibling.nextElementSibling.style.display = 'none';
+				input.classList.remove('invalid');
+			}
+			if (input.classList.contains('valid')) {
+				input.classList.remove('valid');
+			}
+		});
+		if (messageInputGeneral.classList.contains('invalid')) {
+			messageInputGeneral.nextElementSibling.nextElementSibling.style.display = 'none';
+			messageInputGeneral.classList.remove('invalid');
+			feedbackTextGeneral.nextElementSibling.classList.remove('invalid');
+		}
+		if (messageInputGeneral.classList.contains('valid')) {
+			messageInputGeneral.classList.remove('valid');
+			feedbackTextGeneral.nextElementSibling.classList.remove('valid');
+		}
+		lengthSpanGeneral.textContent = 0;
+		generalForm.reset();
 	}
 });
