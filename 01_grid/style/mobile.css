@@ -1,0 +1,361 @@
+@media screen and (max-width: 1050px) {
+
+    /* index.html */
+    #showcase .photo-1 {
+        grid-row: 2 / span 1;
+    }
+
+    #showcase {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #showcase .showcase-heading{
+        grid-column: 1 / span 2;
+    }
+
+    /* about.html */
+    #about-showcase {
+        grid-template-areas:
+        'about-photo-1 about-photo-1 about-photo-1'
+        'about-heading about-heading about-heading'
+        'about-photo-3 about-photo-3 about-photo-3';
+    }
+
+    #about-showcase .about-showcase-photo-2,
+    #about-showcase .about-showcase-photo-4 {
+        display: none;
+    }
+
+    /* menu.html */
+    #menu-showcase {
+        grid-template-areas:
+        'menu-photo-4 menu-photo-4 menu-photo-4'
+        'menu-heading menu-heading menu-heading'
+        'menu-photo-3 menu-photo-3 menu-photo-3';
+    }
+
+    #menu-showcase .menu-showcase-photo-1,
+    #menu-showcase .menu-showcase-photo-2 {
+        display: none;
+    }
+
+    /* services.html */
+    #services-showcase {
+        grid-template-areas:
+        'services-photo-4 services-photo-4 services-photo-4'
+        'services-heading services-heading services-heading'
+        'services-photo-3 services-photo-3 services-photo-3';
+    }
+
+    #services-showcase .services-showcase-photo-1,
+    #services-showcase .services-showcase-photo-2 {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    * {
+        font-size: 9px;
+    }
+
+    /* navbar */
+    #navbar .menu-wrapper .menu > div {
+        width: 55vw;
+    }
+
+    /* index.html */
+    #grid-wrapper-1 {
+        grid-template-areas:
+        'our-story our-story'
+        'what-we-love what-we-love'
+        'menu-link menu-link'
+        'contact contact'
+        'services services';
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, minmax(250px, auto));
+    }
+
+    #contact-info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #opening-hours,
+    #directions,
+    #contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #contact .social {
+        margin-bottom: 2.25rem;
+    }
+
+    #grid-wrapper-2 {
+        grid-template-areas:
+        'gallery gallery '
+        'gallery gallery '
+        'gallery gallery '
+        'booking booking'
+        'directions directions';
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, minmax(250px, auto));
+    }
+
+    #gallery {
+        grid-template-areas:
+        'gallery-heading gallery-heading'
+        'img-1 img-2'
+        'img-3 img-4'
+        'img-5 img-6';
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto repeat(3, minmax(250px, 300px));
+    }
+
+    #gallery .img-7,
+    #gallery .img-8 {
+        display: none;
+    }
+
+    /* about.html */
+    #about-our-team .our-team-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, minmax(100px, 250px));
+    }
+
+    #about-our-team .our-team-gallery label:hover .photo {
+        opacity: 0.5;
+    }
+
+    #about-our-team .our-team-gallery label:hover a > div {
+        opacity: 1;
+    }
+
+    #about-our-team .our-team-gallery label .menu-text,
+    #about-our-team .our-team-gallery input:checked + label .menu-text {
+        background-color: rgba(178, 150, 125, 0.8);
+        font-family: var(--heading-font);
+        position: relative;
+        text-align: center;
+        border-radius: 50%;
+        padding: 1rem;
+        z-index: 2;
+    }
+
+    #about-our-team .our-team-gallery label .menu-text p {
+        display: none;
+    }
+
+    #about-our-team .our-team-gallery > input:checked + label {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    /* services.html */
+    #services-features {
+        grid-template-areas:
+        'order delivery'
+        'quality payment';
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    /* index.html */
+    #showcase .photo-1 {
+        display: none;
+    }
+
+    #showcase .photo-2 {
+        grid-column: 1 / span 2;
+    }
+
+    #contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    #services {
+        grid-template-areas:
+        'services-heading'
+        'catering'
+        'custom-parties';
+        grid-template-columns: auto;
+        grid-template-rows: auto repeat(2, minmax(250px, 300px));
+    }
+
+    #services .catering,
+    #services .custom-parties {
+        display: grid;
+        grid-template-rows: minmax(250px, 300px) auto;
+    }
+
+    #services .photo {
+        height: 100%;
+    }
+
+    #grid-wrapper-2 {
+        grid-template-areas:
+        'gallery '
+        'gallery '
+        'gallery '
+        'booking'
+        'directions';
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, minmax(250px, auto));
+    }
+
+    #gallery {
+        grid-template-areas:
+        'gallery-heading gallery-heading'
+        'img-1'
+        'img-3'
+        'img-5';
+        grid-template-columns: 1fr;
+        grid-template-rows: auto repeat(3, minmax(250px, 300px));
+    }
+
+    #gallery .img-2,
+    #gallery .img-4,
+    #gallery .img-6 {
+        display: none;
+    }
+
+    #map-directions {
+        grid-template-rows: auto;
+    }
+
+    #map-directions .map-directions-text {
+        grid-column: 1 / span 4;
+        grid-row: 2 / span 1;
+    }
+
+    #map-directions .map {
+        grid-column: 1 / span 4;
+        grid-row: 3 / span 1;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    /* about.html */
+    #about-showcase,
+    #menu-showcase,
+    #services-showcase {
+        grid-template-rows: minmax(auto, 250px) auto minmax(auto, 250px);
+    }
+
+    #about-our-team .our-team-gallery {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, minmax(100px, 300px));
+    }
+
+    #about-testimonials {
+        grid-template-areas:
+        'testimonials-text'
+        'testimonial-person-1'
+        'testimonial-person-3';
+        grid-template-columns: auto;
+    }
+
+    #about-testimonials .testimonial-person-2 {
+        display: none;
+    }
+
+    /* menu.html */
+    #menu .breakfast, #menu .lunch, #menu .sandwich, #menu .dessert, #menu .coffee {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    
+    #menu .breakfast .breakfast-photo,
+    #menu .lunch .lunch-photo,
+    #menu .sandwich .sandwich-photo,
+    #menu .dessert .dessert-photo,
+    #menu .coffee .coffee-photo-1,
+    #menu .coffee .coffee-photo-2 {
+        display: none;
+    }
+
+    /* services.html */
+    #services-services .catering-box, #services-services .custom-parties-box {
+        grid-template-areas:
+        'catering-text'
+        'catering-photo';
+        grid-template-columns: auto;
+        grid-template-rows: auto minmax(auto, 250px);
+    }
+    
+    #services-services .custom-parties-box {
+        grid-template-areas:
+        'custom-parties-text'
+        'custom-parties-photo';
+    }
+
+    #services-features {
+        grid-template-areas:
+        'order'
+        'delivery'
+        'quality'
+        'payment';
+        grid-template-columns: auto;
+    }
+
+    #services-form .services-form form {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    * {
+        font-size: 8.5px;
+    }
+
+}
+
+@media screen and (max-height: 600px) {
+
+    /* showcase */
+    #showcase, #about-showcase, #menu-showcase, #services-showcase {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    #showcase .photo-1,
+    #showcase .photo-2,
+    #about-showcase .about-showcase-photo-1,
+    #about-showcase .about-showcase-photo-3,
+    #about-showcase .about-showcase-photo-4,
+    #menu-showcase .menu-showcase-photo-4,
+    #menu-showcase .menu-showcase-photo-3,
+    #services-showcase .services-showcase-photo-4,
+    #services-showcase .services-showcase-photo-3 {
+        display: none;
+    }
+
+    #about-showcase {
+        grid-template-areas:
+        'about-heading about-heading about-heading';
+        align-items: center;
+        grid-template-columns: 1fr;
+    }
+
+    #menu-showcase {
+        grid-template-areas: 
+        'menu-heading menu-heading menu-heading';
+        align-items: center;
+    }
+
+    #services-showcase {
+        grid-template-areas: 
+        'services-heading services-heading services-heading';
+        align-items: center;
+    }
+
+}
