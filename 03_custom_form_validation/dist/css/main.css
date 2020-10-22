@@ -559,6 +559,9 @@ span:focus.invalid + label {
         #about-gallery .our-team-gallery label .menu-text .heading-secondary {
           border-bottom-color: white; }
 
+#testimonials .heading-lead {
+  margin-bottom: -1rem; }
+
 #testimonials .carousel .carousel-item {
   height: 300px;
   width: 300px;

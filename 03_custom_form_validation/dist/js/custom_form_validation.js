@@ -104,8 +104,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	var carouselInstance = M.Carousel.init(
 		carouselElems,
 		{
-			fullWidth: true,
-			indicators: true
+			// fullWidth: true,
+			indicators: true,
+			numVisible: 3,
+			dist: 20
 		}
 	);
 	function moveNextCarousel() {
