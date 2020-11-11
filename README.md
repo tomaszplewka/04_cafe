@@ -37,19 +37,19 @@
     + Desktop :desktop_computer:
     
     <p align="center">
-        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_grid_desktop-min.gif" width="600" alt="desktop">
+        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_grid_desktop-min.gif" width="700" alt="desktop">
     </p>
 
     + Tablet :computer:
     
     <p align="center">
-        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_grid_tablet-min.gif" width="400" alt="tablet">
+        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_grid_tablet-min.gif" width="350" alt="tablet">
     </p>
 
     + Mobile :iphone:
     
     <p align="center">
-        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_grid_mobile-min.gif" width="300" alt="mobile">
+        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_grid_mobile-min.gif" width="250" alt="mobile">
     </p>
     
 + MaterializeCSS
@@ -57,19 +57,19 @@
     + Desktop :desktop_computer:
     
     <p align="center">
-        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_materialize_desktop-min.gif" width="600" alt="desktop">
+        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_materialize_desktop-min.gif" width="700" alt="desktop">
     </p>
 
     + Tablet :computer:
     
     <p align="center">
-        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_materialize_tablet-min.gif" width="400" alt="tablet">
+        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_materialize_tablet-min.gif" width="350" alt="tablet">
     </p>
 
     + Mobile :iphone:
     
     <p align="center">
-        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_materialize_mobile-min.gif" width="300" alt="mobile">
+        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_materialize_mobile-min.gif" width="250" alt="mobile">
     </p>
     
 + JS Custom Form Validation
@@ -77,7 +77,7 @@
     + Tablet :computer:
     
     <p align="center">
-        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_materialize_tablet_form_validation-min.gif" width="400" alt="tablet">
+        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_materialize_tablet_form_validation-min.gif" width="350" alt="tablet">
     </p>
 
 # Toolbox
