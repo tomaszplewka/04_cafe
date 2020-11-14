@@ -34,51 +34,15 @@
 
 + Grid
 
-    + Desktop :desktop_computer:
-    
-    <p align="center">
-        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_grid_desktop-min.gif" width="700" alt="desktop">
-    </p>
-
-    + Tablet :computer:
-    
-    <p align="center">
-        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_grid_tablet-min.gif" width="350" alt="tablet">
-    </p>
-
-    + Mobile :iphone:
-    
-    <p align="center">
-        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_grid_mobile-min.gif" width="250" alt="mobile">
-    </p>
+    [see Grid Demo here](https://github.com/tomaszplewka/04_cafe/tree/master/01_grid "Grid Demo")
     
 + MaterializeCSS
 
-    + Desktop :desktop_computer:
-    
-    <p align="center">
-        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_materialize_desktop-min.gif" width="700" alt="desktop">
-    </p>
-
-    + Tablet :computer:
-    
-    <p align="center">
-        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_materialize_tablet-min.gif" width="350" alt="tablet">
-    </p>
-
-    + Mobile :iphone:
-    
-    <p align="center">
-        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_materialize_mobile-min.gif" width="250" alt="mobile">
-    </p>
+    [see MaterializeCSS Demo here](https://github.com/tomaszplewka/04_cafe/tree/master/02_materialize_css "MaterializeCSS Demo")
     
 + JS Custom Form Validation
 
-    + Tablet :computer:
-    
-    <p align="center">
-        <img src="https://github.com/tomaszplewka/04_cafe/blob/master/gifs/the_cafe_materialize_tablet_form_validation-min.gif" width="350" alt="tablet">
-    </p>
+    [see JS Custom Form Validation Demo here](https://github.com/tomaszplewka/04_cafe/tree/master/03_custom_form_validation "JS Custom Form Validation Demo")
 
 # Toolbox
 
